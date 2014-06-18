@@ -10,5 +10,8 @@ namespace Webberig\HtmlUtilbelt\Generator;
 
 
 class General {
+    public function abbr()
+    {
 
+    }
 } 

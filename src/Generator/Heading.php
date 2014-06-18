@@ -11,6 +11,10 @@ namespace Webberig\HtmlUtilbelt\Generator;
 
 use Webberig\HtmlUtilbelt\Element;
 
+/**
+ * Class Heading
+ * @package Webberig\HtmlUtilbelt\Generator
+ */
 class Heading extends GeneratorAbstract {
     public function h1($content = "", $options = array())
     {

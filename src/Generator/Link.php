@@ -11,4 +11,12 @@ namespace Webberig\HtmlUtilbelt\Generator;
 
 class Link {
 
+    public function link()
+    {
+
+    }
+    public function anchor()
+    {
+
+    }
 } 

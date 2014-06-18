@@ -11,6 +11,11 @@ namespace Webberig\HtmlUtilbelt\Test\Generator;
 
 use Webberig\HtmlUtilbelt\Generator\Heading;
 
+/**
+ * Class HeadingTest
+ * @package Webberig\HtmlUtilbelt\Test\Generator
+ * @covers Webberig\HtmlUtilbelt\Generator\Heading
+ */
 class HeadingTest extends \PHPUnit_Framework_TestCase {
     public function testH1() {
         $gen = new Heading();

@@ -20,7 +20,9 @@ class BootstrapTest extends \PHPUnit_Framework_TestCase {
 
     public function testGlyphicon()
     {
-
+        $gen = new Generator\Bootstrap();
+        $el = $gen->glyphicon("check");
+        $this->assertEquals('<i class="glyphicon glyphicon-check" />', $el);
     }
 
     public function testHelp()
