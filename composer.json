@@ -1,0 +1,24 @@
+{
+    "name": "webberig/html-utilbelt",
+    "description": "A utility belt for Twig",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mathieu Maes",
+            "email": "email@example.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Webberig\\HtmlUtilbelt\\": "src/",
+            "Webberig\\HtmlUtilbelt\\Test\\": "Test/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7",
+        "phpunit/php-code-coverage": "2.0.*"
+    },
+    "require": {
+    }
+}
