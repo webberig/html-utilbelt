@@ -8,13 +8,15 @@
 
 namespace Webberig\HtmlUtilbelt\Generator;
 
-class Bootstrap {
+class Bootstrap extends GeneratorAbstract {
     const BUTTON_PRIMARY = "btn-primary";
     const BUTTON_LARGE = "btn-lg";
 
-    public function lead()
+    public function lead($content = "", $options = array())
     {
-
+        $el = $this->createElement("p", $content, $options);
+        $el->addClass("lead");
+        return $el;
     }
     public function help()
     {
