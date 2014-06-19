@@ -14,6 +14,7 @@ class Element {
     private $element = "div";
     private $id = "";
     private $innerHTML = "";
+    private $attributes = array();
 
     public function __construct($element, $content = null) {
         $this->element = $element;
@@ -70,13 +71,33 @@ class Element {
         if (!empty($this->class)) {
             $attributes["class"] = implode(" ", $this->class);
         }
+        $attributes = array_merge($attributes, $this->attributes);
         return $attributes;
-
     }
     public function __toString()
     {
         return $this->getHtml();
     }
 
+    public function setAttribute($attr, $value)
+    {
+        switch ($attr) {
+            case 'id':
+                $this->setId($value);
+                break;
+            case 'class':
+                $this->class = array();
+                $this->addClass($value);
+                break;
+            default:
+                $this->attributes[$attr] = $value;
+        }
+    }
 
+    public function append($text) {
+        $this->innerHTML .= $text;
+    }
+    public function prepend($text) {
+        $this->innerHTML = $text . $this->innerHTML;
+    }
 }

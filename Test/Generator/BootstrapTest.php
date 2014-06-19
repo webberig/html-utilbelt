@@ -36,10 +36,10 @@ class BootstrapTest extends \PHPUnit_Framework_TestCase {
     {
         $gen = new Generator\Bootstrap();
         $el = $gen->button("Click");
-        $this->assertEquals('<button type="button" class="btn btn-default">Click</button>', $el);
+        $this->assertEquals('<button class="btn btn-default" type="button">Click</button>', (string) $el);
 
         $el = $gen->button("Click", Generator\Bootstrap::BUTTON_PRIMARY);
-        $this->assertEquals('<button type="button" class="btn btn-primary">Click</button>', $el);
+        $this->assertEquals('<button class="btn btn-primary" type="button">Click</button>', (string) $el);
 
         $el = $gen->button("Click", Generator\Bootstrap::BUTTON_PRIMARY, [
                 "class" => Generator\Bootstrap::BUTTON_LARGE,
@@ -47,8 +47,8 @@ class BootstrapTest extends \PHPUnit_Framework_TestCase {
                 "icon-suffix" => "check"
             ]);
         $this->assertEquals(
-            '<button type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-ok" /> Click <i class="glyphicon glyphicon-check" /></button>',
-            $el
+            '<button class="btn btn-primary btn-lg" type="button"><i class="glyphicon glyphicon-ok" /> Click <i class="glyphicon glyphicon-check" /></button>',
+            (string) $el
         );
     }
 
@@ -56,10 +56,10 @@ class BootstrapTest extends \PHPUnit_Framework_TestCase {
     {
         $gen = new Generator\Bootstrap();
         $el = $gen->submit("Click");
-        $this->assertEquals('<button type="submit" class="btn btn-default">Click</button>', $el);
+        $this->assertEquals('<button class="btn btn-default" type="submit">Click</button>', (string) $el);
 
         $el = $gen->submit("Click", Generator\Bootstrap::BUTTON_PRIMARY);
-        $this->assertEquals('<button type="submit" class="btn btn-primary">Click</button>', $el);
+        $this->assertEquals('<button class="btn btn-primary" type="submit">Click</button>', (string) $el);
 
         $el = $gen->submit("Click", Generator\Bootstrap::BUTTON_PRIMARY, [
                 "class" => Generator\Bootstrap::BUTTON_LARGE,
@@ -67,8 +67,8 @@ class BootstrapTest extends \PHPUnit_Framework_TestCase {
                 "icon-suffix" => "check"
             ]);
         $this->assertEquals(
-            '<button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-ok" /> Click <i class="glyphicon glyphicon-check" /></button>',
-            $el
+            '<button class="btn btn-primary btn-lg" type="submit"><i class="glyphicon glyphicon-ok" /> Click <i class="glyphicon glyphicon-check" /></button>',
+            (string) $el
         );
     }
 

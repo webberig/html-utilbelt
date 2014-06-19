@@ -9,14 +9,22 @@
 namespace Webberig\HtmlUtilbelt\Generator;
 
 
-class Link {
+class Link extends GeneratorAbstract
+{
 
-    public function link()
+    public function link($content, $link = null, $options = array())
     {
-
+        $el = $this->createElement("a", $content, $options);
+        if ($link === null) {
+            $link = $content;
+        }
+        $el->setAttribute("href", $link);
+        return $el;
     }
-    public function anchor()
+    public function anchor($name, $options = array())
     {
-
+        $el = $this->createElement("a", $options);
+        $el->setAttribute("name", $name);
+        return $el;
     }
-} 
+}
